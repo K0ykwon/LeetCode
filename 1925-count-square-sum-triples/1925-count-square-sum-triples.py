@@ -5,9 +5,10 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
+        if n<5: return 0
         res = 0
-        for i in range(1,n+1):
-            for j in range(1,i):
+        for i in range(5,n+1):
+            for j in range(3,i):
                 c = i**2 - j**2
                 if math.isqrt(c)**2 == c: res += 1
         return res
